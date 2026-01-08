@@ -12,6 +12,7 @@ import {
   subscribeToMessages,
   markConversationAsRead,
   ConversationWithUnread,
+  Conversation,
   Message,
 } from '@/lib/supabase-chat'
 import Image from 'next/image'

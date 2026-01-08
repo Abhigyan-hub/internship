@@ -21,6 +21,7 @@ interface Room {
   description: string
   images: string[]
   created_at: string
+  owner_id: string
 }
 
 interface RoomListProps {

@@ -19,11 +19,14 @@ export default function AuthPage() {
     setMessage('')
 
     try {
+      // Use environment variable for production URL, fallback to current origin
+      const redirectUrl = process.env.NEXT_PUBLIC_SITE_URL || window.location.origin
+      
       if (isSignUp) {
         const { error } = await supabase.auth.signInWithOtp({
           email,
           options: {
-            emailRedirectTo: `${window.location.origin}/`,
+            emailRedirectTo: `${redirectUrl}/`,
             data: {
               user_role: userRole,
             },
@@ -35,7 +38,7 @@ export default function AuthPage() {
         const { error } = await supabase.auth.signInWithOtp({
           email,
           options: {
-            emailRedirectTo: `${window.location.origin}/`,
+            emailRedirectTo: `${redirectUrl}/`,
           },
         })
         if (error) throw error

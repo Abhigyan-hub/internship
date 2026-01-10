@@ -12,9 +12,9 @@ interface DashboardLayoutProps {
 
 export function DashboardLayout({ children }: DashboardLayoutProps) {
   const pathname = usePathname()
-  const { user, userRole } = useAuth()
+  const { user, userRole, isAdminUser } = useAuth()
   const [sidebarOpen, setSidebarOpen] = useState(true)
-
+  
   const navItems = [
     {
       name: 'Browse Rooms',
@@ -39,6 +39,12 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
       href: '/messages',
       icon: '💬',
       show: !!user,
+    },
+    {
+      name: 'Admin Panel',
+      href: '/admin',
+      icon: '⚙️',
+      show: isAdminUser,
     },
   ].filter(item => item.show)
 

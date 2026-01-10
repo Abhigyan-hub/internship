@@ -50,7 +50,7 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
         <aside
           className={`${
             sidebarOpen ? 'w-64' : 'w-20'
-          } fixed left-0 top-22 h-[calc(100vh-5rem)] transition-all duration-300 z-40 hidden lg:block backdrop-blur-md`}
+          } fixed left-0 top-16 h-[calc(100vh-4rem)] transition-all duration-300 z-40 hidden lg:block backdrop-blur-md`}
           style={{ backgroundColor: 'rgba(240, 242, 255, 0.1)', borderRight: '1px solid rgba(209, 213, 255, 0.1)' }}
         >
           <div className="p-4">
@@ -98,19 +98,19 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
 
         {/* Main Content */}
         <main
-          className={`flex-1 transition-all duration-300 ${
+          className={`flex-1 transition-all duration-300 pt-16 pb-20 lg:pb-6 ${
             sidebarOpen ? 'lg:ml-64' : 'lg:ml-20'
           }`}
         >
-          <div className="p-6 lg:p-8">
+          <div className="p-4 sm:p-6 lg:p-8">
             {children}
           </div>
         </main>
       </div>
 
       {/* Mobile Sidebar */}
-      <div className="lg:hidden fixed bottom-0 left-0 right-0 z-40 shadow-lg backdrop-blur-md" style={{ backgroundColor: 'rgba(30, 49, 158, 0.85)', borderTop: '1px solid rgba(23, 42, 122, 0.7)' }}>
-        <nav className="flex justify-around items-center p-2">
+      <div className="lg:hidden fixed bottom-0 left-0 right-0 z-40 shadow-lg backdrop-blur-md h-20" style={{ backgroundColor: 'rgba(30, 49, 158, 0.85)', borderTop: '1px solid rgba(23, 42, 122, 0.7)' }}>
+        <nav className="flex justify-around items-center h-full px-2">
           {navItems.map((item) => {
             const isActive = pathname === item.href
             return (

@@ -54,7 +54,7 @@ export default function AuthPage() {
   return (
     <div className="min-h-screen bg-white">
       <Navbar />
-      <main className="max-w-md mx-auto px-4 py-12">
+      <main className="max-w-md mx-auto px-4 pt-20 pb-12">
         <div className="bg-white rounded-2xl shadow-card p-8 sm:p-10 border border-gray-100">
           <h1 className="text-3xl font-bold text-center mb-6 text-gray-900">
             {isSignUp ? 'Create Account' : 'Sign In'}

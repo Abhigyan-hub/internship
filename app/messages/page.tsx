@@ -179,12 +179,12 @@ export default function MessagesPage() {
           ) : (
             <div>
               <h1 className="text-2xl font-bold text-gray-900 mb-1">Messages</h1>
-              <p className="text-gray-600 text-sm">Chat with room owners and finders</p>
+              <p className="text-gray-600 text-sm"></p>
             </div>
           )}
         </div>
 
-        <div className="bg-white rounded-2xl shadow-card border border-gray-100 overflow-hidden h-[calc(100vh-12rem)] md:h-[calc(100vh-12rem)] flex flex-col md:flex-row">
+        <div className="bg-white rounded-2xl shadow-card border border-gray-100 overflow-hidden h-[calc(100vh-16rem)] md:h-[calc(100vh-12rem)] flex flex-col md:flex-row">
           {/* Conversations List */}
           <div
             className={`${
